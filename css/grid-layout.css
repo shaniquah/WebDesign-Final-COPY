@@ -1,0 +1,183 @@
+.item1 {
+    grid-area: header;
+    justify-content: center;
+    color: rgb(23, 33, 33);
+    text-shadow: 1.5px 1px 10px rgb(4, 238, 255);
+    text-align: center;
+    font-size: 36px;  /*specifies font size of element text*/
+    background-color: rgb(7, 116, 116); /*background color to be used as backup when image fails to load*/
+    background-position:center center;  /*center background image vertically and horizontally*/
+    background-repeat:repeat; /*repeats image in a tile-sequence on the page*/
+    background-attachment:local;  /*background only scrolls with element's contents*/
+    background-size: 150px; /*specify size of background image*/
+    padding-bottom: 2.5rem;
+    border-bottom: 5px solid rgb(7, 116, 116);  /*add subtle bottom border to melt into the sidebar when background is an image*/
+}
+
+/*Style media queries for responsive background images in the page header*/
+@media only screen and (min-width:600px) { 
+    .item1 {
+        background-image: url(/images/mybackground-1.png);
+    }
+}
+  
+@media only screen and (min-width:768px) {
+    .item1 {
+        background-image: url(/images/mybackground-2.png);
+    }
+}
+  
+@media only screen and (min-width:1024px) {
+    .item1 {
+        background-image: url(/images/mybackground-3.png);
+    }
+}
+ 
+img {
+    width: 100%;
+}
+
+/*Style font size and style of heading to make it stand out from the rest of the document*/
+.h1 {
+    font-family: 'Edwardian Script ITC', Pristina, sans-serif;
+    font-size: 10vw;
+}
+
+/*Style profile image*/
+.profile {
+    border: 5px solid rgb(253, 234, 234);
+    border-radius: 50%; /*rounds profile image border*/
+    width:25%; 
+    height: 25%;
+}
+
+.item2 {
+    grid-area: nav;
+    color: #ffffff;
+    background-color: rgb(48, 58, 41);
+    justify-content: space-between;
+    align-items:center;
+    text-align:justify;
+    padding: 14px 16px;
+    float: left;
+    position:top;
+    width:fit-content;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav {
+    margin: 50px;
+}
+
+/*Default fixed nav menu styling*/
+.nav-menu {
+    list-style-type: none;
+    display: block;
+    line-height: 50px;
+    padding: 20px 10px;
+    margin: 0px;
+}
+
+/*Style responsive attributes of navigation menu using media queries*/
+@media only screen and (max-width:767px) {
+    #sidebar {
+      list-style-type: none;
+      background-color: #343330;
+      background-image: linear-gradient(rgb(11, 118, 113), #343330);
+    }
+  
+    .nav-menu li a {
+      display:block;
+      padding: 15px 5px;
+      color:lightblue;
+    }
+}
+  
+@media only screen and (min-width:768px) {
+    #sidebar {
+      background-color: #343330;
+      background-image: linear-gradient(rgb(11, 118, 113), forestgreen, #343330);
+    }
+  
+    .nav-menu li a {
+      display:block;
+      padding: 15px 5px;
+      color:rgb(117, 232, 252);
+    }
+}
+  
+@media only screen and (min-width:1025px) {
+    #sidebar {
+      list-style-type: none;
+      background-color: #343330;
+      background-image: linear-gradient(rgb(11, 118, 113), rgb(1, 97, 1), rgb(2, 122, 122), #343330);
+    }
+  
+    .nav-menu li a {
+      display:block;
+      padding: 15px 5px;
+      color:rgb(171, 251, 208);
+    }
+}
+
+.item3 {
+    grid-area: main;
+    flex-direction: column;
+    padding: 10px;
+    margin: 30px;
+}
+
+.item4 {/*Style page footer*/
+    grid-area: footer;
+    color:rgb(239, 232, 237);
+    background-color: #343330;
+    text-align: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+/*Style icons in page footer*/
+.icons {    /* The element to apply the animation to */
+    border: 5px solid transparent;
+    border-radius: 50%;
+    width: 3rem;
+    margin: 2rem;
+    height: auto;
+}
+
+ /* The animation code */
+@keyframes animatedLogo { /*keyframe label must always match animation name*/
+  
+    0%   {filter: none;
+          transform: scale(1, 1);}
+    50%  {filter: drop-shadow(-16px 16px 20px red);
+          transform: scale(1.5, 1.5);}
+    100% {filter: none;
+          transform: scale(1, 1);}
+} 
+
+.icons:hover { /* Sets animation to only work when mouse is hovering over the image */
+    animation-name: animatedLogo; /* Sets height of image */
+    animation-duration: 3s; /* Sets duration of each animation cycle */
+    animation-iteration-count:infinite; /* Sets number of times each animation cycle repeats itself */
+    animation-timing-function: ease; /* Sets progression of animation for each cycle */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:"header header header"
+                        "nav main main"
+                        "nav footer footer";
+    gap: 0px;
+    background-color: auto;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: auto;
+    text-align: auto;
+    padding: 20px 0;
+    font-size: 18px;
+    font-family: Helvetica, Verdana, sans-serif;
+}

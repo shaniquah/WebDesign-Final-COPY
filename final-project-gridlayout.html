@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
     <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <!--Set responsive viewport-->
-        <title>OS Resume</title>    <!--The title of the page is "OS Resume" and will display on the tab-->
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">   <!--link html file to stylesheet-->
-        
+        <link rel="stylesheet"  type="text/css" href="css/grid-layout.css">
+        <title>Grid Layout</title>
     </head>
 
     <body>
 
         <div class="grid-container">
-     
-                <div class="header">
-                    <!--div has been successfully made responsive using css elements of media queries for changing background image-->
+            <div class="item1">
+                <header>
+                                           
+                    <img class="profile" 
+                        src="images/osprofile.jpg"
+                        alt="Otshepeng Setuke profile">
+                        
+                    <h1 class="h1">Otshepeng Setuke</h1>    <!--class gives identifier for CSS to easily access elements from the stylesheet with class selectors-->
+                    <p>A young black woman who strives for perfection but settles for excellence looking to work in an environment that helps me enhance my professional skill-set and overcome challenges.</p>
 
-                    <header id="pageHeader">   <!--gives header a unique id to identify it in the stylesheet when linking-->
-                                               
-                        <img class="profile" 
-                            src="images/osprofile.jpg"
-                            alt="Otshepeng Setuke profile">
-                            
-                        <h1 class="h1">Otshepeng Setuke</h1>    <!--class gives identifier for CSS to easily access elements from the stylesheet with class selectors-->
-                        <p>A young black woman who strives for perfection but settles for excellence looking to work in an environment that helps me enhance my professional skill-set and overcome challenges.</p>
-
-                    </header>   <!--closes header tag-->
-            
-                </div>  <!--closes div tag-->
-
-        <main id="main">
-
-            <div id="sidebar">
-
+                </header>   <!--closes header tag-->
+            </div>
+            <div class="item2">
                 <nav id="mainNav">
-
                     <!--this div has been successfully made responsive using css-->
 
                     <h2>Menu</h2>
@@ -48,12 +34,9 @@
                         <li class="item">    <a href="#interests">Interests</a></li>
 
                     </ul>
-                </nav>      
-                
+                </nav>
             </div>
-
-            <div class="content">
-
+            <div class="item3">
                 <article>
 
                 <h2 id="introduction">Introduction</h2>
@@ -150,61 +133,53 @@
                     </ul>
 
                 </article>
-
             </div>
+            <div class="item4">
+                <footer>    <!--div item4 in grid container-->
 
+                    <h2>Contact Details</h2>    <!--all contact links below redirect user to new blank tab-->
+                   
+                    <ul>
+                        <a href="https://www.linkedin.com/in/otshepeng-setuke-2b829615b/" target="_blank">
 
-        </main>
+                            <img class="icons" src="images/linkedin-logo.png"
+                            alt="Otshepeng Setuke LinkedIn">
+                        </a>
 
+                        <a href="mailto:shaniquah.setuke@gmail.com" target="_blank">    <!--href mailto: attribute opens new tab or redirects to mail app to compose mail to the email address written in the code-->
 
-                <footer id="pageFooter">
+                            <img class="icons" src="images/gmail-logo.png"
+                            alt="Otshepeng Setuke Gmail">
+                        </a>
 
-                    <div id="bottom">
+                        <a href="https://twitter.com/ShaniquahSetuke" target="_blank">
 
-                        <h2>Contact Details</h2>    <!--all contact links below redirect user to new blank tab-->
-                        <ul>
-                            <a href="https://www.linkedin.com/in/otshepeng-setuke-2b829615b/" target="_blank">
+                            <img class="icons" src="images/twitter-icon.png"
+                            alt="Otshepeng Setuke Twitter">
+                        </a>
 
-                                <img class="icons" src="images/linkedin-logo.png"
-                                alt="Otshepeng Setuke LinkedIn">
-                            </a>
+                        <a href="https://github.com/shaniquah" target="_blank">
 
-                            <a href="mailto:shaniquah.setuke@gmail.com" target="_blank">    <!--href mailto: attribute opens new tab or redirects to mail app to compose mail to the email address written in the code-->
+                            <img class="icons" src="images/github-logo.png"
+                            alt="Otshepeng Setuke GitHub">
+                        </a>
 
-                                <img class="icons" src="images/gmail-logo.png"
-                                alt="Otshepeng Setuke Gmail">
-                            </a>
+                        <a href="https://goo.gl/maps/KMQmT2XiAquF3pbs9" target="_blank">
 
-                            <a href="https://twitter.com/ShaniquahSetuke" target="_blank">
+                            <img class="icons" src="images/maps-pin-icon.jpg"
+                            alt="Otshepeng Setuke Location">
+                        </a>
 
-                                <img class="icons" src="images/twitter-icon.png"
-                                alt="Otshepeng Setuke Twitter">
-                            </a>
+                        <a href="tel:+27671671820" target="_blank"> <!--href tel: attribute places phone call to the number written in the code from a blank page-->
+                            
+                            <img class="icons" src="images/phone-icon.png"
+                            alt="Otshepeng Setuke Call">
+                        </a>
 
-                            <a href="https://github.com/shaniquah" target="_blank">
+                    </ul>
 
-                                <img class="icons" src="images/github-logo.png"
-                                alt="Otshepeng Setuke GitHub">
-                            </a>
-
-                            <a href="https://goo.gl/maps/KMQmT2XiAquF3pbs9" target="_blank">
-
-                                <img class="icons" src="images/maps-pin-icon.jpg"
-                                alt="Otshepeng Setuke Location">
-                            </a>
-
-                            <a href="tel:+27671671820" target="_blank"> <!--href tel: attribute places phone call to the number written in the code from a blank page-->
-                                
-                                <img class="icons" src="images/phone-icon.png"
-                                alt="Otshepeng Setuke Call">
-                            </a>
-
-                        </ul>
-
-                    </div>
-        
                 </footer>
-   
+            </div>
         </div>
 
     </body>
