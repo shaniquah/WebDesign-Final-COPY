@@ -99,7 +99,8 @@ header {
   border-bottom: 5px solid rgb(7, 116, 116);  /*add subtle bottom border to melt into the sidebar when background is an image*/
 }
 
-@media only screen and (min-width:600px) {
+/*Style media queries for responsive background images in the page header*/
+@media only screen and (min-width:600px) { 
   #pageHeader {
     background-image: url(/images/mybackground-1.png);
   }
@@ -118,7 +119,7 @@ header {
 }
 
 
-
+/*Style profile image*/
 .profile {
   border: 5px solid rgb(253, 234, 234);
   border-radius: 50%;
@@ -126,11 +127,13 @@ header {
   height: 25%;
 }
 
+/*Style font style and size of heading1 to make it stand out*/
 .h1{
   font-family: 'Edwardian Script ITC', Pristina, sans-serif;
   font-size: 10vw;
 }
 
+/*Style page footer*/
 footer {
   color:rgb(239, 232, 237);
   background-color: #343330;
@@ -139,6 +142,7 @@ footer {
   font-size: x-large;
 }
 
+/*Style navigation menu*/
 #sidebar {
   color: #ffffff;
   background-color: rgb(48, 58, 41);
@@ -154,6 +158,7 @@ footer {
   flex-direction: row;
 }
 
+/*Style responsive attributes of navigation menu using media queries*/
 @media only screen and (max-width:767px) {
   #sidebar {
     list-style-type: none;
@@ -203,6 +208,8 @@ footer {
   padding: 20px 10px;
 }
 
+
+/*Style icons in page footer*/
 .icons {
   border: 5px solid transparent;
   border-radius: 50%;
