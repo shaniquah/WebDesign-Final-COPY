@@ -18,16 +18,9 @@
                     <!--div has been successfully made responsive using css elements of media queries for changing background image-->
 
                     <header id="pageHeader">   <!--gives header a unique id to identify it in the stylesheet when linking-->
-                        
-                        <div id="searchBar">
-                    
-                            <input type="text" placeholder="Search resume">
-                            <input id="input-icon" type="submit" value="Search">
-                            
-                        </div>
-                        
+                                               
                         <img class="profile" 
-                            src="images/OS profile.jpg"
+                            src="images/osprofile.jpg"
                             alt="Otshepeng Setuke profile">
                             
                         <h1 class="h1">Otshepeng Setuke</h1>    <!--class gives identifier for CSS to easily access elements from the stylesheet with class selectors-->
@@ -67,14 +60,41 @@
 
                 <p>Born and bred in Phokeng, a bona fide Mofokeng, Otshepeng Setuke is an ambitious young woman fluent in English and Setswana. A very kind and compassionate individual, hard working and a fast learner. With a vast variety of talents and skills at my disposal, an addition such as myself to any team would be vital. I can flourish in stressful situations and adjust easily to new challenges. A multi-skilled creative with great leadership and management skills who works with extreme caution and diligence.</p>
 
-                <div id="media-grid">
+                <div id="slideshow"> 
 
-                    <picture>
-                        <source media="(max-width: 650px)" srcset="images/MyProfile_small.jpg"> <!--650px is the maximum size of a small screen and every small screen will render this image-->
-                        <source media="(max-width:1400px)" srcset="images/MyProfile_med.jpg">   <!--1400px is the maximum size of a medium screen and every medium screen will render this image-->
-                        <img src="images/MyProfile.jpg" alt="Shot of Otshepeng Setuke"> <!--in cases where the screen is large, this larger image will be displayed instead-->
-                        
-                    </picture>
+                    <div class="wrapper">
+
+                        <div class="images">
+
+                            <picture class="images-number">   <!--introduce first image in gallery sequence-->
+                                <source media="(max-width: 650px)" srcset="images/myprofile_small.jpg"> <!--650px is the maximum size of a small screen and every small screen will render this image-->
+                                <source media="(max-width:1400px)" srcset="images/myprofile_med.jpg">   <!--1400px is the maximum size of a medium screen and every medium screen will render this image-->
+                                <img src="images/MyProfile.jpg" alt="Shot of Otshepeng Setuke"> <!--in cases where the screen is large, this larger image will be displayed instead-->
+                                
+                            </picture>
+                        </div>
+
+                        <div class="images">
+
+                            <picture class="images-number">   <!--introduce second image in gallery sequence-->
+                                <source media="(max-width:650px)" srcset="images/myprofile-2_small.png">
+                                <source media="(max-width:1400px)" srcset="images/myprofile-2_med.png">
+                                <img src="images/myprofile-2.png" alt="Gallery image of Otshepeng Setuke">
+
+                            </picture>
+                        </div>
+
+                        <div class="images">
+
+                            <picture class="images-number">   <!--introduce third image in gallery sequence-->
+                                <source media="(max-width:650px)" srcset="images/myprofile-3_small.png">
+                                <source media="(max-width:1400px)" srcset="images/myprofile-3_med.png">
+                                <img src="images/myprofile-3.png" alt="Gallery shot of Otshepeng Setuke">
+
+                            </picture>
+                        </div>
+
+                    </div>
 
                 </div>
 

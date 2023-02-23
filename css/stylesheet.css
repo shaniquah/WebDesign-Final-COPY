@@ -10,92 +10,59 @@ body {  /*styling the layout of the body element when in view*/
   display: grid;
   grid-template-areas:"header header header"
                       "nav main main"
-                      "footer footer footer";
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto auto;
-  gap: 0vw;
+                      "nav footer footer";
+  grid-template-rows:1fr 100px;
+  grid-template-columns: 3fr;
+  gap: 0px;
   height: 100vh;
-  margin: 0;
+  margin: 0px;
 }
 
 header, footer, main, nav, div {
-  padding: 20px;
+  border: 0px;
+  padding: 0px;
   background:none;
 }
 
 #pageHeader {
   grid-area: header;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 #pageFooter {
   grid-area: footer;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 #main {
   grid-area: main;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 #mainNav {
   grid-area: nav;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  
 }
 
-#searchBar {
-  grid-area: div;
-  overflow: hidden;
-  justify-items: center;
-}
-
-#searchBar input[type=text] {
-  float: right;
-  padding: 14px;
-  border: 1.5px solid rgb(0, 0, 0);
-  border-radius: 200px;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-}
-
-#input-icon {
-  position: absolute; /*fixes icon within search bar even when screen is scrolling*/
-  background-image: url(images/search-icon.png); /*locates search icon from local folder*/
-  background-size:contain;
-  border: none;
-  cursor: pointer;
-  color: transparent;
-  top: 65px;
-  right: 80px;;
-  width: 2rem;
-  margin: 2rem;
-  height: 2rem;
-}
-
-/*
-.grid-container > div {
-  font-size: 5vw;
-  padding: 10px;
-  background-color: gold;
+.grid-container {
+  padding: 10px 0;
+  background-color: none;
   text-align: justify;
 }
 
-#media-grid {
-  display: subgrid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-}
-
-@media screen and (max-width:480px) {
-  .header {
-    grid-row-start:1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-
-  #bottom {
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-} */
 
 .main {
   display: flex;
@@ -104,20 +71,13 @@ header, footer, main, nav, div {
   box-sizing: border-box;
 }
 
-@media screen and (max-width:480px) {
-  
-  .content{
-    display:inline-table;
-    width: 45%;
-    height: 250px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#bottom{
+  width: 90%;
+}
 
-  #bottom{
-    width: 90%;
-  }
+.header {
+  padding: 0%;
+  border: 0%;
 }
 
 header {
@@ -135,25 +95,25 @@ header {
   background-repeat:repeat; /*repeats image in a tile-sequence on the page*/
   background-attachment:local;  /*background only scrolls with element's contents*/
   background-size: 150px; /*specify size of background image*/
-  padding-bottom: 0.5rem;
+  padding-bottom: 2.5rem;
   border-bottom: 5px solid rgb(7, 116, 116);  /*add subtle bottom border to melt into the sidebar when background is an image*/
 }
 
 @media only screen and (min-width:600px) {
   #pageHeader {
-    background-image: url(images/MyBackground-1.png);
+    background-image: url(/images/mybackground-1.png);
   }
 }
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
   #pageHeader {
-    background-image: url(images/MyBackground-2.png);
+    background-image: url(/images/mybackground-2.png);
   }
 }
 
 @media only screen and (min-width:1025px) {
   #pageHeader {
-    background-image: url(images/MyBackground-3.png);
+    background-image: url(/images/mybackground-3.png);
   }
 }
 
@@ -182,7 +142,6 @@ footer {
 #sidebar {
   color: #ffffff;
   background-color: rgb(48, 58, 41);
-  padding: 2px;
   margin:0px;
   justify-content: space-between;
   align-items:center;
